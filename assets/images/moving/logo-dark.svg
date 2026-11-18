@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="60" viewBox="0 0 176 60">
+  <g transform="translate(116 8)">
+    <rect width="56" height="44" rx="10" fill="#d90202"/>
+    <rect x="8" y="13" width="24" height="16" rx="2" fill="#fff"/>
+    <path d="M32 17h8l6 6v6H32z" fill="#fff"/>
+    <circle cx="15" cy="32" r="4" fill="#fff" stroke="#d90202" stroke-width="2"/>
+    <circle cx="39" cy="32" r="4" fill="#fff" stroke="#d90202" stroke-width="2"/>
+  </g>
+  <text x="108" y="40" text-anchor="end" font-family="Cairo, Tajawal, Tahoma, Arial, sans-serif" font-size="32" font-weight="800" fill="#111111">نقلة</text>
+  <text x="108" y="55" text-anchor="end" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="10" fill="#d90202">لنقل العفش والأثاث</text>
+</svg>

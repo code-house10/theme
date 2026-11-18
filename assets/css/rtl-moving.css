@@ -1,0 +1,38 @@
+/* RTL + Arabic overrides for the moving-company page (loaded after style.rtl.css) */
+:root { --servixa-font: "Cairo", "Tajawal", Tahoma, sans-serif; }
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, input, textarea, select, button, .thm-btn {
+  font-family: var(--servixa-font);
+}
+h1, h2, h3, h4, h5, h6 { letter-spacing: 0 !important; line-height: 1.35; }
+p { letter-spacing: 0 !important; }
+/* arrow icons should point the reading direction */
+[class^="icon-next"], .icon-next, .icon-back, .icon-arrow-right, .icon-right-arrow { display: inline-block; transform: scaleX(-1); }
+/* icon-font replacements (Font Awesome solid) */
+.fas.fa-truck-moving, .fas.fa-box-open, .fas.fa-clipboard-check, .fas.fa-building, .fas.fa-people-carry,
+.fas.fa-couch, .fas.fa-warehouse, .fas.fa-route, .fas.fa-tools, .fas.fa-dolly, .fas.fa-shield-alt {
+  font-family: "Font Awesome 5 Pro" !important; font-weight: 900 !important; font-style: normal;
+}
+/* marquee keeps scrolling left; content still Arabic */
+.sliding-text-two__list { direction: ltr; }
+.sliding-text-two__list li { direction: rtl; }
+/* form fields */
+input, textarea, select { text-align: right; }
+input[type="email"], a[href^="mailto:"], a[href^="tel:"] { direction: ltr; unicode-bidi: embed; display: inline-block; }
+
+/* numbers & counters must stay LTR (otherwise "100%" shows as "%001") */
+.odometer, .counter-one__count, .about-two__experience-count, .pricing-two__price { direction: ltr; unicode-bidi: isolate; }
+.counter-one__count, .about-two__experience-count { justify-content: center; }
+/* hero: hide car/mechanic cutouts, let the moving photo show through */
+.main-slider-two__img-box { display: none; }
+.main-slider-two__bg-box:before {
+  background: linear-gradient(to left, rgba(17,17,17,.93) 0%, rgba(17,17,17,.8) 40%, rgba(17,17,17,.25) 100%);
+}
+/* remove car-themed decorations */
+.about-two__shape-1, .about-two__shape-2, .pricing-two__img { display: none; }
+img[src*="about-two-shape"], img[src*="pricing-one-img-1"] { display: none; }
+.brand-one { display: none; }
+/* before/after labels */
+.twentytwenty-before-label:before { content: "التغليف" !important; }
+.twentytwenty-after-label:before { content: "التحميل" !important; }
+.pricing-two__price span { font-size: 11px; white-space: nowrap; width: 44px !important; height: 44px !important; }
+.main-slider-two__shape-1 { display: none !important; }
